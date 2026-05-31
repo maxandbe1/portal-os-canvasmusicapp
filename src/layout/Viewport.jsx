@@ -1,0 +1,17 @@
+// src/layout/Viewport.jsx
+import React from "react";
+import DashboardView from "../modules/dashboard/view.jsx";
+import ConsoleView from "../modules/console/view.jsx";
+import CanvasMusicView from "../modules/canvas-music/view.jsx";
+
+export default function Viewport({ active }) {
+  switch (active) {
+    case "dashboard":
+      return <DashboardView />;
+    case "console":
+      return <ConsoleView />;
+    case "canvas-music":
+    default:
+      return <CanvasMusicView />;
+  }
+}
